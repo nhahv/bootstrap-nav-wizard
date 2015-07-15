@@ -4,6 +4,13 @@
 .nav-wizard > li > a {
   position: relative;
   background-color: #eeeeee;
+  line-height: 12px;
+}
+.nav-wizard > li > a h4 {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  margin: 0;
 }
 .nav-wizard > li > a .badge {
   margin-left: 3px;
@@ -11,14 +18,14 @@
   background-color: #428bca;
 }
 .nav-wizard > li:not(:first-child) > a {
-  padding-left: 34px;
+  padding-left: 42px;
 }
 .nav-wizard > li:not(:first-child) > a:before {
   width: 0px;
   height: 0px;
-  border-top: 20px inset transparent;
-  border-bottom: 20px inset transparent;
-  border-left: 20px solid #ffffff;
+  border-top: 24px inset transparent;
+  border-bottom: 24px inset transparent;
+  border-left: 24px solid #ffffff;
   position: absolute;
   content: "";
   top: 0;
@@ -30,13 +37,13 @@
 .nav-wizard > li:not(:last-child) > a:after {
   width: 0px;
   height: 0px;
-  border-top: 20px inset transparent;
-  border-bottom: 20px inset transparent;
-  border-left: 20px solid #eeeeee;
+  border-top: 24px inset transparent;
+  border-bottom: 24px inset transparent;
+  border-left: 24px solid #eeeeee;
   position: absolute;
   content: "";
   top: 0;
-  right: -20px;
+  right: -24px;
   z-index: 2;
 }
 .nav-wizard > li:first-child > a {
@@ -82,11 +89,11 @@
   background-color: #ffffff;
 }
 .nav-wizard > li.disabled > a {
-  color: #777777;
+  color: #999999;
 }
 .nav-wizard > li.disabled > a:hover,
 .nav-wizard > li.disabled > a:focus {
-  color: #777777;
+  color: #999999;
   text-decoration: none;
   background-color: #eeeeee;
   cursor: default;
@@ -96,6 +103,24 @@
 }
 .nav-wizard > li.disabled > a:after {
   border-left-color: #eeeeee;
+}
+.nav-wizard > li.active ~ li > a {
+  color: #999999;
+  pointer-events: none;
+  background-color: #bbbbbb;
+}
+.nav-wizard > li.active ~ li > a:hover,
+.nav-wizard > li.active ~ li > a:focus {
+  color: #999999;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+.nav-wizard > li.active ~ li > a:before {
+  border-right-color: #bbbbbb;
+}
+.nav-wizard > li.active ~ li > a:after {
+  border-left-color: #bbbbbb;
 }
 .nav-wizard.nav-justified > li {
   float: none;
